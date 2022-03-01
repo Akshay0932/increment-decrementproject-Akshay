@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- CSS code-->
+
+		<style>
+			/*apply css properties to body tag*/
+
+			body {
+				position: absolute;
+				left: 0%;
+				text-align: center
+                               background-color:red;
+			}
+
+			/*apply css properties to container class*/
+
+			.container {
+				justify-content: center;
+				align-items: center;
+				display: flex;
+				height: 100%;
+				text-align: center;
+			}
+
+			/*apply css properties to button tag*/
+
+			button {
+				width: 90px;
+				height: 60px;
+				font-size: 30px;
+				background-color: red;
+				color: black;
+			}
+
+			/*apply hover effect to button tag*/
+
+			button:hover {
+				background-color: yellow;
+				color: grey;
+			}
+
+			/*apply css properties to h2 tag*/
+
+			h2 {
+				color: black;
+				margin: 0 50px;
+				font-size: 45px;
+			}
+			/*apply css properties to h1 tag*/
+
+			h1 {
+				font-size: 35px;
+				color: green;
+				text-align: center;
+				padding-left: 10%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- give a suitable heading using h1 tag-->
+		<h1>Increment,reset and Decrement counter</h1>
+
+		<div ="container">
+<center><h2 id="counting"></h2>
+<button onclick="increment()">+</button>  
+                      <button onclick="reset()">o</button>
+			<button onclick="decrement()">-</button></center>
+		</div>
+		<!-- JavaScript code-->
+		<script>
+			//initialising a variable name data
+			var data = 0;
+
+			//printing default value of data that is 0 in h2 tag
+			document.getElementById("counting").innerText = data;
+
+			//creation of increment function
+			function increment() {
+				data = data + 1;
+				document.getElementById("counting").innerText = data;
+			}
+                         function reset() {
+				data = 0;
+				document.getElementById("counting").innerText = data;
+			}
+			//creation of decrement function
+			function decrement() {
+				data = data - 1;
+				document.getElementById("counting").innerText = data;
+			}
+		</script>
+	</body>
+</html>
